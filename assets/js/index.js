@@ -14,10 +14,24 @@ btnAgregartareas.addEventListener("click", () => {
     for (let tarea of arrayTareas) {
         html += `<li>${tarea}
         <input  id="taraeRealizada"    type="checkbox"></li>
-        <button type="submit" class="" id="eliminarTarea">Eliminar tarea</button> `;
+        <button type="submit" class="" onclick="eliminarTarea(${tarea.id})" id="eliminarTarea">Eliminar tarea</button> `;
     }
     listaTareas.innerHTML = html;
     console.log(arrayTareas.length);
     let contadorElemento = document.querySelector("#contador");
     contadorElemento.textContent = contador;
 });
+
+
+
+function eliminarTarea(id){
+    let index = arrayTareas.findIndex((ele) => ele.id == id)
+    arrayTareas.splice(index, 1)
+    let html = ""
+    for (tarea of arrayTareas) {
+    html += `<li> <button onclick="borrar(${tarea.id})"> x
+   </button> </li>`;
+    }
+    listadoTareas.innerHTML = html;
+    }
+   
