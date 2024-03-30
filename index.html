@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 5 To do list</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
- <main>
+    <main>
         <div class="contenedor">
-            <h1>To do List</h1>
+            <h1>Todo List</h1>
             <p>Nueva tarea</p>
-            <input type="text" class="" id="txtTarea">
+            <input type="text" class="" id="txtTarea" placeholder="Nombre de la tarea">
             <button type="submit" class="" id="btnAgregarTarea">Agregar</button>
-            <table>
-                <th>ID</th>
-                <th>Tarea</th>
+            <p id="totalText">Total: <span id="contadorTotal">0</span></p>
+            <p id="totalRealizadas">Realizadas:<span id="contadorRealizadas">0</span></p>
+            <table class="listaTareas">
+                
             </table>
-            <ul  id="listaTareas"></ul>
-            <p id="totalText">Total: <span id="contador">0</span></p>
-            <p>Realizadas:</p>
         </div>
     </main>
-<script src="./assets/js/index.js"> </script>
+    <script src="./assets/js/index.js"> </script>
 </body>
+
 </html>
